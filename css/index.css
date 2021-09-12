@@ -1,0 +1,47 @@
+<body>
+  <nav id="navBar">
+    <h1>Furniture</h1>
+    <div id="navigation">
+      <p class="highlight">New In</p>
+      <p>Furniture</p>
+      <p>Rest</p>
+      <p>Decoration</p>
+      <p>Outdoor</p>
+      <p>Magazine</p>
+      <p>Outlet</p>
+    </div>
+
+
+#navBar {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 5%;
+}
+#navBar h1 {
+  width: 25%;
+  font-weight: 500;
+}
+#navigation {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#navigation p {
+  cursor: pointer;
+  text-decoration: none;
+}
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 25%;
+}
+.icons img {
+  margin: 15px;
+  cursor: pointer;
+}
+.highlight {
+  color: #FF6200;
+  font-weight: 700;
+}
