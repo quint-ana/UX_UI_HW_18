@@ -1,47 +1,95 @@
-<body>
-  <nav id="navBar">
-    <h1>Furniture</h1>
-    <div id="navigation">
-      <p class="highlight">New In</p>
-      <p>Furniture</p>
-      <p>Rest</p>
-      <p>Decoration</p>
-      <p>Outdoor</p>
-      <p>Magazine</p>
-      <p>Outlet</p>
-    </div>
+.inline-block{
+  display:inline-block;
+  vertical-align:top;
+  }
 
+  .inline-block li {
+    width: 75px;
+  }
 
-#navBar {
-  display: flex;
-  flex-direction: row;
-  margin: 0px 5%;
+  .logo{
+      max-width: 50px;
+      height: auto;
+      padding:1%;
+      text-align:center;
+  }
+  nav{
+      width:97%;
+      padding:20px;
+      background-color:#66B1F2;
+  }
+  ul{
+      width:50%;
+      margin-left:auto;
+      display:inline-block;
+      vertical-align:top;
+      padding:20px;
+  }
+  .heroImg{
+      width:600px;
+      padding:25px
+  }
+  .content{
+      width:500px;
+      margin:0 auto;
+  }
+  footer{
+      background-color:#66B1F2;
+      width: 97%;
+      padding: 20px;
+  }
+
+  body {
+    color: #212121;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+<!--  My UX Skills section coded using CSS flex -->
+
+.flexContainer {
+  display:flex;
+  width: 33%;
+  margin: 25px;
+  padding: 25px;
+  flex-direction: column;
 }
-#navBar h1 {
-  width: 25%;
-  font-weight: 500;
+.flexContainer {
+  display:flex;
 }
-#navigation {
-  display: flex;
+.flexContainer div {
+  width:33%;
+  margin: 25px;
+  padding: 25px;
+  flex-direction: column;
+}
+
+<!-- My Work Section Constructed using CSS Grid -->
+
+.myWork {
+  grid-area: myArea;
+}
+
+.workGrid{
+  display:grid;
+}
+.workGrid div {
+  grid-template-rows: 20%;
+  grid-template-columns: 125px 20%;
   width: 50%;
-  align-items: center;
-  justify-content: space-evenly;
+  padding: 25px;
 }
-#navigation p {
-  cursor: pointer;
-  text-decoration: none;
-}
-.icons {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 25%;
-}
-.icons img {
-  margin: 15px;
-  cursor: pointer;
-}
-.highlight {
-  color: #FF6200;
-  font-weight: 700;
+
+@media only screen and (max-width: 600){
+  .flexContainer {
+    flex-direction:column;
+  }
+  .flexContainer div {
+    width: 100%;
+    grid-template-rows: 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "aboutMyself"
+      "mySkills"
+      "myWork"
+  }
 }
