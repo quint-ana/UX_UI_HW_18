@@ -1,39 +1,78 @@
-.inline-block{
+.inline-block {
   display:inline-block;
   vertical-align:top;
+  width: 95%;
+  /*float: right;*/
+  
   }
 
   .inline-block li {
     width: 75px;
+    
   }
 
-  .logo{
-      max-width: 50px;
+/*logo below*/
+
+  .inline-block img {
+      max-width: 100px;
       height: auto;
       padding:1%;
       text-align:center;
+      display: block;
+      margin-right: auto;
+      margin-left: 0;
   }
-  nav{
+
+  nav {
       width:97%;
       padding:20px;
       background-color:#66B1F2;
   }
-  ul{
+
+  /*#left {
+      float: right;
+      margin-right:0px;
+      margin-left:50%;
+  }*/
+
+  ul {
       width:50%;
       margin-left:auto;
       display:inline-block;
       vertical-align:top;
       padding:20px;
   }
-  .heroImg{
-      width:600px;
-      padding:25px
+
+  .heroImg {
+      width:80%;
+      padding:15px;
+      margin: auto;
   }
-  .content{
+
+  /*.content img {
+    margin-right:0;
+    margin-left:auto;
+    display:block;
+  }*/
+
+  #right {
+    float: right;
+    margin-right: 0px;
+    margin-left: auto;
+  }
+
+  /*#left {
+    float: left;
+    margin-right:auto;
+    margin-left: 0;
+  }*/
+
+  /*.content{
       width:500px;
       margin:0 auto;
-  }
-  footer{
+  }*/
+
+  footer {
       background-color:#66B1F2;
       width: 97%;
       padding: 20px;
@@ -44,15 +83,8 @@
     font-family: 'Montserrat', sans-serif;
   }
 
-<!--  My UX Skills section coded using CSS flex -->
+/*<!--  My UX Skills section coded using CSS flex -->*/
 
-.flexContainer {
-  display:flex;
-  width: 33%;
-  margin: 25px;
-  padding: 25px;
-  flex-direction: column;
-}
 .flexContainer {
   display:flex;
 }
@@ -63,20 +95,26 @@
   flex-direction: column;
 }
 
-<!-- My Work Section Constructed using CSS Grid -->
-
-.myWork {
-  grid-area: myArea;
+.mySkills h1 {
+  margin: auto;
 }
+
+/*<!-- My Work Section Constructed using CSS Grid -->*/
 
 .workGrid{
   display:grid;
 }
 .workGrid div {
-  grid-template-rows: 20%;
-  grid-template-columns: 125px 20%;
+  grid-template-rows: 125px 50%;
+  grid-template-columns: 125px 50%;
   width: 50%;
   padding: 25px;
+  grid-template-areas:
+    "leftContent rightContent"
+}
+
+.workGrid img {
+  padding:15px;
 }
 
 @media only screen and (max-width: 600){
